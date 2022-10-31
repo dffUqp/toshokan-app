@@ -1,7 +1,7 @@
 import ImageWithPlaceholder from '@components/ImageWithPlaceholder';
 import { IAnimeStaff } from '@ts/AnimeInterface';
 
-const StaffItem = ({ staff }: { staff: IAnimeStaff }) => {
+const StaffItem = ({ staff }: { staff: IAnimeStaff }): JSX.Element => {
   return (
     <a
       href={staff.person.url}

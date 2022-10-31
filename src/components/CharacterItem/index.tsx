@@ -10,7 +10,7 @@ type CharacterItemProps = {
 const CharacterItem = ({
   character,
   language = 'Japanese',
-}: CharacterItemProps) => {
+}: CharacterItemProps): JSX.Element => {
   const voice_actor = character.voice_actors.find(
     (elem) => elem.language === language
   );

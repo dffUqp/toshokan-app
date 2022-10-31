@@ -1,25 +1,21 @@
-import { ITopAndUncomingTitle } from '@interfaces/ITopAndUpcomingTitles';
+import { IAnime } from '@ts/AnimeInterface';
 import { Link } from 'react-router-dom';
 import { BsFillStarFill } from 'react-icons/bs';
 import styles from './Card.module.scss';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import 'tippy.js/animations/scale.css';
-import ToolltipCard from '@components/ToolltipCard';
+import ToolltipCard from '@components/CardsBlock/partials/ToolltipCard';
+import ImageWithPlaceholder from '@components/ImageWithPlaceholder';
+import { beautifyUrl } from '@utils/beautifyUrl';
 
 type cardProps = {
-  card: ITopAndUncomingTitle;
+  card: IAnime;
   disabled: boolean;
-  imgLoaded: boolean;
-  setImgLoaded: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Card = ({
-  card,
-  disabled,
-  imgLoaded,
-  setImgLoaded,
-}: cardProps): JSX.Element => {
+const Card = ({ card, disabled }: cardProps): JSX.Element => {
+  const locale = window.locale;
+
   return (
     <article
       tabIndex={card.mal_id}
@@ -27,29 +23,28 @@ const Card = ({
     >
       <Tippy
         placement="right"
-        delay={400}
+        arrow={false}
+        delay={[400, 200]}
+        offset={[-25, 10]}
         content={<ToolltipCard {...card} />}
         disabled={disabled}
-        interactive={true}
       >
-        <Link className="mobileMd:flex w-full" to="#">
-          <img
-            onLoad={() => setImgLoaded(true)}
+        <Link
+          className="mobileMd:flex w-full"
+          to={`/${locale}/anime/${card.mal_id}/${beautifyUrl(card.title)}`}
+        >
+          <ImageWithPlaceholder
+            src={card.images.jpg.image_url}
             className={styles['card-img']}
-            src={
-              imgLoaded
-                ? card.images.jpg.image_url
-                : 'images/imagePreloader.webp'
-            }
             alt="anime canvas"
           />
 
           <div className={styles['block-card-info']}>
-            <h3 className={styles['card-title']}>{card.title}</h3>
+            <span className={styles['card-title']}>{card.title}</span>
 
-            <h4 className={styles['card-desc']}>{card.synopsis}</h4>
+            <span className={styles['card-desc']}>{card.synopsis}</span>
 
-            <h4 className={styles['card-fold-desc']}>{card.synopsis}</h4>
+            <span className={styles['card-fold-desc']}>{card.synopsis}</span>
 
             <div className={styles['card-section-score-type-year']}>
               <div className="mobileMd:flex mobileMd:gap-2 items-center">

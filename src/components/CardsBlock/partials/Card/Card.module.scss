@@ -7,7 +7,7 @@
 }
 
 .card-title {
-  @apply mobileMd:text-light-orange m-xs-:text-md m-sm-:text-base mobileMd:whitespace-normal mobileMd:text-lg mobileMd:overflow-visible whitespace-nowrap overflow-hidden text-ellipsis;
+  @apply block mobileMd:text-light-orange m-xs-:text-md m-sm-:text-base mobileMd:whitespace-normal mobileMd:text-lg mobileMd:overflow-visible whitespace-nowrap overflow-hidden text-ellipsis;
 
   @media (max-width: 640px) {
     overflow: hidden;

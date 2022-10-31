@@ -1,44 +1,27 @@
-import { useEffect, useState } from 'react';
 import Card from './partials/Card';
 import styles from './CardsBlock.module.scss';
-import { ITopAndUncomingTitle } from '@interfaces/ITopAndUpcomingTitles';
+import { IAnime } from '@ts/AnimeInterface';
 import { useIsMobileMd, useIsXl } from '@hooks/useCurrentBreakpoints';
-import MobileSkeleton from './partials/skeletons/MobileSkeleton';
-import DescTabletSkeleton from './partials/skeletons/DescTabletSkeleton';
+import MobileSkeleton from './partials/Skeletons/MobileSkeleton';
+import DescTabletSkeleton from './partials/Skeletons/DescTabletSkeleton';
 
 type cardsBlockProps = {
-  data: ITopAndUncomingTitle[];
+  data: IAnime[];
   isLoading: boolean;
 };
 
 const CardsBlock = ({ data, isLoading }: cardsBlockProps): JSX.Element => {
-  const [disabled, setDisabled] = useState<boolean>(false);
-  const [imgLoaded, setImgLoaded] = useState<boolean>(false);
-
   const xl = useIsXl();
   const mobileMd = useIsMobileMd();
-
-  const currentSizeWindow = () => (xl ? setDisabled(true) : setDisabled(false));
-
-  useEffect(() => {
-    currentSizeWindow();
-    // eslint-disable-next-line
-  }, [xl]);
 
   return (
     <div className="w-full">
       <div className={styles['cards-block']}>
-        {data?.map((item: ITopAndUncomingTitle, index) => (
-          <Card
-            key={index}
-            setImgLoaded={setImgLoaded}
-            imgLoaded={imgLoaded}
-            disabled={disabled}
-            card={item}
-          />
+        {data?.map((item: IAnime, index) => (
+          <Card key={index} disabled={xl} card={item} />
         ))}
         {isLoading &&
-          [...new Array(25)].map((_, index) =>
+          [...new Array(10)].map((_, index) =>
             mobileMd ? (
               <MobileSkeleton key={index} />
             ) : (

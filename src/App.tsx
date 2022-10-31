@@ -1,19 +1,17 @@
-import Preloader from '@components/Preloader';
+import Preloader from '@components/UI/Loaders/Preloader';
 import React from 'react';
 import AppRoutes from './router/AppRoutes';
 
-const LocaleFrame = React.lazy(() => import('@layouts/LocaleFrame'));
+const LocaleFrame = React.lazy(() => import('@components/LocaleFrame'));
 
 function App() {
   return (
-    <div className="App">
-      <div className="wrapper">
-        <AppRoutes />
+    <div className="wrapper">
+      <AppRoutes />
 
-        <React.Suspense fallback={<Preloader />}>
-          <LocaleFrame />
-        </React.Suspense>
-      </div>
+      <React.Suspense fallback={<Preloader />}>
+        <LocaleFrame />
+      </React.Suspense>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom/client';
+import React from 'react';
 import '@styles/app.scss';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
@@ -23,11 +24,13 @@ window.disableScroll = disableScroll;
 window.enableScroll = enableScroll;
 
 root.render(
-  <RecoilRoot>
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </QueryClientProvider>
-  </RecoilRoot>
+  <React.StrictMode>
+    <RecoilRoot>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </QueryClientProvider>
+    </RecoilRoot>
+  </React.StrictMode>
 );

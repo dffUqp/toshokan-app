@@ -7,9 +7,9 @@ const LocaleFrame = (): JSX.Element | null => {
 
   if (localStorage.getItem('isOldUser') != null) {
     return null;
-  } else {
-    window.disableScroll();
   }
+
+  window.disableScroll();
 
   const onChangeLng = (locale: string) => {
     i18n.changeLanguage(locale);

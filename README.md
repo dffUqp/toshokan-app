@@ -5,7 +5,7 @@ This project is AnimePlatform
 where u can know any information about your 
 favorite anime or characters.  
 If said more simply this app is Wikipedia in the cartoons world.  
-[LINK PREVIEW](splendorous-druid-f83cc3.netlify.app)
+[LINK PREVIEW](https://splendorous-druid-f83cc3.netlify.app)
 
 Techlogy stack: 
 - React

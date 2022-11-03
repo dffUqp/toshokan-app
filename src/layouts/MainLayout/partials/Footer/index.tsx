@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex md:gap-4 sm:justify-center sm:flex-col ">
           <div className="flex flex-auto flex-col gap-2 sm:items-center">
             <Link
-              className="sm:flex sm:flex-col sm:items-center"
+              className="sm:flex sm:flex-col sm:items-center w-max"
               to={`/${locale}`}
             >
               <img

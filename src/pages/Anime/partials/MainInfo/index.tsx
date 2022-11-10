@@ -33,7 +33,7 @@ const MainInfo = ({ anime }: MainInfoProps): JSX.Element => {
     <div className="flex md:flex-col gap-5 md:items-center">
       <ImageWithPlaceholder
         src={anime?.images.jpg.image_url}
-        className="w-[230px] h-[320px]"
+        className="max-w-[230px] h-[320px]"
         alt="anime canvas"
       />
       <div className="flex flex-col bg-light-gray-opacity p-3 w-full">

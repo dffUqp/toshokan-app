@@ -13,7 +13,7 @@ Techlogy stack:
 - Recoil
 - Tailwind
 - TypeScript
-- React Querry
+- React Query
 - React Spring
 - I18n
 

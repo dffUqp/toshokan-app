@@ -1,9 +1,9 @@
 import Spinner from '@components/UI/Loaders/Spinner';
 import TitlesService from '@services/AnimeService';
 import {
-  AnimeCharacterResponce,
-  AnimeGalleryResponce,
-  AnimeStaffResponce,
+  AnimeCharacterResponse,
+  AnimeGalleryResponse,
+  AnimeStaffResponse,
 } from '@services/AnimeServiceTypes';
 import { useQuery } from 'react-query';
 import { Navigate, Outlet, useOutletContext, useParams } from 'react-router';
@@ -15,9 +15,9 @@ export type AnimeUrlParam = {
 };
 
 type OutletContextType = {
-  charactersData: AnimeCharacterResponce | undefined;
-  galleryData: AnimeGalleryResponce | undefined;
-  staffData: AnimeStaffResponce | undefined;
+  charactersData: AnimeCharacterResponse | undefined;
+  galleryData: AnimeGalleryResponse | undefined;
+  staffData: AnimeStaffResponse | undefined;
 };
 
 export function useAnime() {
@@ -45,7 +45,7 @@ const Anime = (): JSX.Element => {
   );
 
   const { data: galleryData } = useQuery(
-    'Gallerys',
+    'Gallery',
     () => TitlesService.getAnimeGallery(animeId),
     {
       enabled: !!anime?.data?.mal_id,

@@ -24,7 +24,7 @@ module.exports = {
       md: { max: '768px' },
       lessMd: { max: '640px' },
       sm: { max: '580px' },
-      notMobilehover: { raw: '(hover: hover)' },
+      notMobileHover: { raw: '(hover: hover)' },
     },
     placeholderColor: {
       'primary-color': '#fcfcfc',

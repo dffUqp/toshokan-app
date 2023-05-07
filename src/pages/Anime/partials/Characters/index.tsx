@@ -7,7 +7,7 @@ import Select from '@components/UI/Select';
 
 const Characters = (): JSX.Element => {
   const { charactersData } = useAnime();
-  const [formatedCharacters, setFormatedCharacters] = useState<
+  const [formattedCharacters, setFormattedCharacters] = useState<
     IAnimeCharacter[]
   >([]);
 
@@ -21,7 +21,7 @@ const Characters = (): JSX.Element => {
   useEffect(() => {
     if (charactersData?.data && myElemVisible) {
       const { data } = charactersData;
-      setFormatedCharacters((elem) => {
+      setFormattedCharacters((elem) => {
         return data.length > 20 ? data.slice(0, elem.length + 20) : data;
       });
     }
@@ -46,16 +46,16 @@ const Characters = (): JSX.Element => {
       />
 
       <div className="grid grid-cols-2 gap-10 xl:grid-cols-none">
-        {formatedCharacters.map((item, index) => (
+        {formattedCharacters.map((item, index) => (
           <CharacterItem
-            character={item}
             key={index}
+            character={item}
             language={characterLanguage}
           />
         ))}
       </div>
 
-      {charactersData.data.length !== formatedCharacters.length && (
+      {charactersData.data.length !== formattedCharacters.length && (
         <div ref={observerRef} />
       )}
     </div>

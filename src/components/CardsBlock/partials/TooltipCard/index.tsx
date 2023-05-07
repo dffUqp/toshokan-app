@@ -1,8 +1,8 @@
 import { IAnime } from '@ts/AnimeInterface';
 import { Link } from 'react-router-dom';
-import styles from './ToolltipCard.module.scss';
+import styles from './TooltipCard.module.scss';
 
-const ToolltipCard = (card: IAnime): JSX.Element => {
+const TooltipCard = (card: IAnime): JSX.Element => {
   const genresNotFound = (
     <span className="text-contrast-gray text-base">genres not found</span>
   );
@@ -65,4 +65,4 @@ const ToolltipCard = (card: IAnime): JSX.Element => {
   );
 };
 
-export default ToolltipCard;
+export default TooltipCard;

@@ -38,7 +38,7 @@ const Footer = () => {
             <NavBar
               className="flex items center justify-center"
               classNameForUl="flex items-end gap-2 flex-col sm:flex-row  sm:flex-wrap sm:w-full sm:justify-center"
-              classNameForLi="mr-9 sm:mr-0 text-lg sm:text-base sm:text-center mx-2 duration-200 notMobilehover:hover:text-purple"
+              classNameForLi="mr-9 sm:mr-0 text-lg sm:text-base sm:text-center mx-2 duration-200 notMobileHover:hover:text-purple"
             />
 
             <div className="flex flex-col gap-5 sm:flex-row sm:flex-wrap sm:justify-evenly">

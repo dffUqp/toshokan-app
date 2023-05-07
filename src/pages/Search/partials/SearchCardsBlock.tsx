@@ -6,13 +6,13 @@ import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'react-i18next';
 import TitlesService from '@services/AnimeService';
 
-type SeacrhCardsBlockProps = {
+type SearchCardsBlockProps = {
   searchValue: string;
 };
 
-const SeacrhCardsBlock = ({
+const SearchCardsBlock = ({
   searchValue,
-}: SeacrhCardsBlockProps): JSX.Element => {
+}: SearchCardsBlockProps): JSX.Element => {
   const { t } = useTranslation();
   const [searchData, setSearchData] = useState<IAnime[]>([]);
   const [pages, setPages] = useState<IDataPagination | null>(null);
@@ -70,4 +70,4 @@ const SeacrhCardsBlock = ({
   );
 };
 
-export default SeacrhCardsBlock;
+export default SearchCardsBlock;

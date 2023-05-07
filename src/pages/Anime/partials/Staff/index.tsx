@@ -7,7 +7,7 @@ import { IAnimeStaff } from '@ts/AnimeInterface';
 const Staff = (): JSX.Element => {
   const { staffData } = useAnime();
 
-  const [formatedStaff, setFormatedStaff] = useState<IAnimeStaff[]>([]);
+  const [formattedStaff, setFormattedStaff] = useState<IAnimeStaff[]>([]);
   const { ref: observerRef, inView: myElemVisible } = useInView({
     rootMargin: '0px 0px 130px 0px',
   });
@@ -16,7 +16,7 @@ const Staff = (): JSX.Element => {
     if (staffData?.data && myElemVisible) {
       const { data } = staffData;
 
-      setFormatedStaff((elem) =>
+      setFormattedStaff((elem) =>
         data.length ?? 0 > 20 ? data.slice(0, elem.length + 20) : data
       );
     }
@@ -29,11 +29,11 @@ const Staff = (): JSX.Element => {
   return (
     <div className="flex flex-col mx-auto max-w-[950px] w-full">
       <div className="grid grid-cols-2 gap-10 xl:grid-cols-none">
-        {formatedStaff.map((item, index) => (
+        {formattedStaff.map((item, index) => (
           <StaffItem staff={item} key={index} />
         ))}
       </div>
-      {staffData?.data.length !== formatedStaff.length && (
+      {staffData?.data.length !== formattedStaff.length && (
         <div ref={observerRef} />
       )}
     </div>

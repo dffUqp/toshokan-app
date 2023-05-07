@@ -32,8 +32,8 @@ const ExtraInfo = ({ anime }: ExtraInfoProps): JSX.Element => {
 
   const complexItems: IExtraInfoComplexItems[] = [
     { title: 'Producers:', content: anime.producers },
-    { title: 'Synonims:', content: anime.title_synonyms },
-    { title: 'Geners:', content: anime.genres },
+    { title: 'Synonyms:', content: anime.title_synonyms },
+    { title: 'Genres:', content: anime.genres },
   ];
 
   return (

@@ -1,13 +1,13 @@
-import { SwiperOptions, Pagination, Autoplay} from 'swiper';
-import styles from '../Slider.module.scss';
+import { SwiperOptions, Pagination, Autoplay } from 'swiper';
 
 export const swiperSettings: SwiperOptions = {
   pagination: {
     type: 'bullets',
     dynamicBullets: true,
     clickable: true,
-    bulletActiveClass: `swiper-pagination-bullet-active ${styles['pagination-bullet-active']}`,
-    bulletClass: `swiper-pagination-bullet ${styles['pagination-bullet']}`,
+    bulletActiveClass:
+      'swiper-pagination-bullet-active pagination-bullet-active',
+    bulletClass: 'swiper-pagination-bullet pagination-bullet',
   },
 
   setWrapperSize: true,
@@ -27,7 +27,7 @@ export const swiperSettings: SwiperOptions = {
   },
   breakpoints: {
     320: {
-      slidesPerView: "auto",
+      slidesPerView: 'auto',
       spaceBetween: 10,
     },
 

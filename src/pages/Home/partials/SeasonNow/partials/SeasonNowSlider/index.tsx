@@ -1,16 +1,19 @@
 import { Dispatch } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useQuery } from 'react-query';
+
 import 'swiper/scss';
-import styles from './Slider.module.scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/scrollbar';
 import 'swiper/scss/navigation';
-import Slide from './partials/Slide';
+import './Slider.scss';
+
 import { IAnime } from '@ts/AnimeInterface';
+import TitlesService from '@services/AnimeService';
+
+import Slide from './partials/Slide';
 import { Swiper as swiper } from 'swiper/types';
 import SeasonNowSkeleton from './partials/Skeletons/SeasonNowSkeleton';
-import { useQuery } from 'react-query';
-import TitlesService from '@services/AnimeService';
 import { swiperSettings } from './plugins/swiperSettings';
 
 type SliderProps = {
@@ -39,17 +42,17 @@ const Slider = ({ setProgressBar }: SliderProps): JSX.Element => {
   return (
     <Swiper
       {...swiperSettings}
-      className={styles.swiper}
+      className="swiper"
       onSlideChange={onSlideChange}
     >
       {isLoading
         ? [...new Array(10)].map((_, index) => (
-            <SwiperSlide key={index} className={styles['swiper-slide']}>
+            <SwiperSlide key={index} className="swiper-slide">
               <SeasonNowSkeleton className="w-auto" />
             </SwiperSlide>
           ))
         : data?.data.map((item: IAnime) => (
-            <SwiperSlide className={styles['swiper-slide']} key={item.mal_id}>
+            <SwiperSlide className="swiper-slide" key={item.mal_id}>
               <Slide slide={item} />
             </SwiperSlide>
           ))}

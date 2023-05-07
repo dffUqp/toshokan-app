@@ -9,17 +9,17 @@ type MainInfoProps = {
 };
 
 const MainInfo = ({ anime }: MainInfoProps): JSX.Element => {
-  const [formatedSinopsis, setFormatedSinopsis] = useState<string>(
+  const [formattedSinopsis, setFormattedSinopsis] = useState<string>(
     anime?.synopsis ?? ''
   );
 
   const isMd = useIsMd();
 
   const descriptionLengthToggle = () => {
-    if (isMd || !(formatedSinopsis.length > 833)) {
-      setFormatedSinopsis(anime?.synopsis ?? '');
+    if (isMd || !(formattedSinopsis.length > 833)) {
+      setFormattedSinopsis(anime?.synopsis ?? '');
     } else {
-      setFormatedSinopsis(anime?.synopsis.substring(0, 830) + '...');
+      setFormattedSinopsis(anime?.synopsis.substring(0, 830) + '...');
     }
   };
 
@@ -39,10 +39,10 @@ const MainInfo = ({ anime }: MainInfoProps): JSX.Element => {
       <div className="flex flex-col bg-light-gray-opacity p-3 w-full">
         <h1 className="text-lg">{anime?.title}</h1>
 
-        <p className="text-base text-contrast-gray my-3 notMobilehover:hover:text-white duration-300 md:text-md">
-          {formatedSinopsis}
+        <p className="text-base text-contrast-gray my-3 notMobileHover:hover:text-white duration-300 md:text-md">
+          {formattedSinopsis}
         </p>
-        {formatedSinopsis.length === 833 && (
+        {formattedSinopsis.length === 833 && (
           <div
             onClick={() => descriptionLengthToggle()}
             className="flex justify-center py-1 h-full bg-gray-opacity duration-300 opacity-0 mt-[-35px] hover:opacity-100 cursor-pointer"

@@ -11,7 +11,7 @@ const StaffPreview = ({ staff }: StaffPreviewProps): JSX.Element | null => {
     return null;
   }
 
-  const formatedStaff = staff.slice(0, 6);
+  const formattedStaff = staff.slice(0, 6);
 
   return (
     <div className="flex flex-col gap-y-2">
@@ -19,7 +19,7 @@ const StaffPreview = ({ staff }: StaffPreviewProps): JSX.Element | null => {
         Staff
       </Link>
       <div className="grid grid-cols-2 gap-5 xl:grid-cols-none">
-        {formatedStaff.map((item, index) => (
+        {formattedStaff.map((item, index) => (
           <StaffItem staff={item} key={index} />
         ))}
       </div>

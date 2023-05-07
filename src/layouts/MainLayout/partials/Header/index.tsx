@@ -117,7 +117,7 @@ const Header = (): JSX.Element => {
             <SideBar toggleNav={toggleNav} isNavOpen={isNavOpen}>
               <NavBar
                 classNameForUl={'flex items-center xl:flex-col'}
-                classNameForLi={styles['item-moobile']}
+                classNameForLi={styles['item-mobile']}
                 className="xl:flex xl:flex-col xl:items-center"
                 setIsNavOpen={setIsNavOpen}
               />

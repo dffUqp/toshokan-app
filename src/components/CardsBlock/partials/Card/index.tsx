@@ -4,9 +4,10 @@ import { BsFillStarFill } from 'react-icons/bs';
 import styles from './Card.module.scss';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import ToolltipCard from '@components/CardsBlock/partials/ToolltipCard';
 import ImageWithPlaceholder from '@components/ImageWithPlaceholder';
 import { beautifyUrl } from '@utils/beautifyUrl';
+
+import TooltipCard from '../TooltipCard';
 
 type cardProps = {
   card: IAnime;
@@ -26,7 +27,7 @@ const Card = ({ card, disabled }: cardProps): JSX.Element => {
         arrow={false}
         delay={[400, 200]}
         offset={[-25, 10]}
-        content={<ToolltipCard {...card} />}
+        content={<TooltipCard {...card} />}
         disabled={disabled}
       >
         <Link

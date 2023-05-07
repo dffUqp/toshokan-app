@@ -1,14 +1,14 @@
 import { axios } from '@plugins';
 import {
-  AnimeByIdResponce,
-  AnimeCharacterResponce,
-  AnimeGalleryResponce,
-  AnimeStaffResponce,
-  AnimeResponce,
+  AnimeByIdResponse,
+  AnimeCharacterResponse,
+  AnimeGalleryResponse,
+  AnimeStaffResponse,
+  AnimeResponse,
 } from './AnimeServiceTypes';
 
 export default class TitlesService {
-  static async getTopAnime(page: number): Promise<AnimeResponce> {
+  static async getTopAnime(page: number): Promise<AnimeResponse> {
     return await axios({
       method: 'GET',
       url: 'top/anime',
@@ -16,7 +16,7 @@ export default class TitlesService {
     }).then((res) => res.data);
   }
 
-  static async getUpcomingTitles(limit: number): Promise<AnimeResponce> {
+  static async getUpcomingTitles(limit: number): Promise<AnimeResponse> {
     return await axios({
       method: 'GET',
       url: 'seasons/upcoming',
@@ -27,7 +27,7 @@ export default class TitlesService {
   static async getSearchedTitles(
     searchValue: string,
     currentPage: number
-  ): Promise<AnimeResponce> {
+  ): Promise<AnimeResponse> {
     return await axios({
       method: 'GET',
       url: 'anime',
@@ -38,7 +38,7 @@ export default class TitlesService {
   static async getSeasonsNowTitles(
     limit: number,
     page = 1
-  ): Promise<AnimeResponce> {
+  ): Promise<AnimeResponse> {
     return await axios({
       method: 'GET',
       url: 'seasons/now',
@@ -46,27 +46,27 @@ export default class TitlesService {
     }).then((res) => res.data);
   }
 
-  static async getAnime(id: string): Promise<AnimeByIdResponce> {
+  static async getAnime(id: string): Promise<AnimeByIdResponse> {
     return await axios({
       method: 'GET',
       url: `anime/${id}/full`,
     }).then((res) => res.data);
   }
 
-  static async getAnimeCharacters(id: string): Promise<AnimeCharacterResponce> {
+  static async getAnimeCharacters(id: string): Promise<AnimeCharacterResponse> {
     return await axios({
       method: 'GET',
       url: `anime/${id}/characters`,
     }).then((res) => res.data);
   }
 
-  static async getAnimeStaff(id: string): Promise<AnimeStaffResponce> {
+  static async getAnimeStaff(id: string): Promise<AnimeStaffResponse> {
     return await axios({
       method: 'GET',
       url: `anime/${id}/staff`,
     }).then((res) => res.data);
   }
-  static async getAnimeGallery(id: string): Promise<AnimeGalleryResponce> {
+  static async getAnimeGallery(id: string): Promise<AnimeGalleryResponse> {
     return await axios({
       method: 'GET',
       url: `anime/${id}/pictures`,

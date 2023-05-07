@@ -2,8 +2,8 @@ import Card from './partials/Card';
 import styles from './CardsBlock.module.scss';
 import { IAnime } from '@ts/AnimeInterface';
 import { useIsMobileMd, useIsXl } from '@hooks/useCurrentBreakpoints';
-import MobileSkeleton from './partials/Skeletons/MobileSkeleton';
-import DescTabletSkeleton from './partials/Skeletons/DescTabletSkeleton';
+import MobileSkeleton from './partials/skeletons/MobileSkeleton';
+import DescTabletSkeleton from './partials/skeletons/DescTabletSkeleton';
 
 type cardsBlockProps = {
   data: IAnime[];

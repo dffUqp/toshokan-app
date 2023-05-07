@@ -6,24 +6,24 @@ import {
   IAnimeStaff,
 } from '@ts/AnimeInterface';
 
-export interface AnimeByIdResponce {
+export interface AnimeByIdResponse {
   data?: IAnime;
   status?: number;
 }
 
-export interface AnimeResponce {
+export interface AnimeResponse {
   data: IAnime[];
   pagination: IDataPagination;
 }
 
-export interface AnimeCharacterResponce {
+export interface AnimeCharacterResponse {
   data?: IAnimeCharacter[];
 }
 
-export interface AnimeStaffResponce {
+export interface AnimeStaffResponse {
   data?: IAnimeStaff[];
 }
 
-export interface AnimeGalleryResponce {
+export interface AnimeGalleryResponse {
   data?: IAnimeGallery[];
 }

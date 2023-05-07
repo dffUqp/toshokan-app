@@ -16,7 +16,6 @@
   }
 }
 
-
 .select_btn {
   @apply hover:text-purple duration-300;
 }
@@ -25,7 +24,7 @@
   @apply text-purple;
 }
 
-.item-moobile {
+.item-mobile {
   @apply relative text-xl duration-300 mr-9;
 
   @apply xl:mr-0 xl:mb-3 xl:text-xl;

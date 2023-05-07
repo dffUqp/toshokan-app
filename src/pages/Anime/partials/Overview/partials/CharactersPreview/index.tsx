@@ -2,16 +2,18 @@ import CharacterItem from '@components/CharacterItem';
 import { Link } from 'react-router-dom';
 import { IAnimeCharacter } from '@ts/AnimeInterface';
 
-type CharcPreviewProps = {
+type CharactersPreviewProps = {
   character: IAnimeCharacter[] | undefined;
 };
 
-const CharcPreview = ({ character }: CharcPreviewProps): JSX.Element | null => {
+const CharactersPreview = ({
+  character,
+}: CharactersPreviewProps): JSX.Element | null => {
   if (!character || character?.length === 0) {
     return null;
   }
 
-  const formatedCharacters = character.slice(0, 4);
+  const formattedCharacters = character.slice(0, 4);
 
   return (
     <div className="flex flex-col gap-y-2">
@@ -19,7 +21,7 @@ const CharcPreview = ({ character }: CharcPreviewProps): JSX.Element | null => {
         Character
       </Link>
       <div className="grid grid-cols-2 gap-10 xl:grid-cols-none">
-        {formatedCharacters.map((item, index) => (
+        {formattedCharacters.map((item, index) => (
           <CharacterItem character={item} key={index} />
         ))}
       </div>
@@ -27,4 +29,4 @@ const CharcPreview = ({ character }: CharcPreviewProps): JSX.Element | null => {
   );
 };
 
-export default CharcPreview;
+export default CharactersPreview;

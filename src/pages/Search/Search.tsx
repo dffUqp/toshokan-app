@@ -1,17 +1,17 @@
-import SeacrhCardsBlock from '@pages/Search/partials/SeacrhCardsBlock';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import SearchCardsBlock from './partials/SearchCardsBlock';
 
 const Search = (): JSX.Element => {
-  const [isVisible, setIsvisible] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   let [searchParams] = useSearchParams();
   const searchValue = searchParams.get('q') || '';
 
   const refreshComponent = () => {
-    setIsvisible(false);
+    setIsVisible(false);
 
     setTimeout(() => {
-      setIsvisible(true);
+      setIsVisible(true);
     }, 0);
   };
 
@@ -21,7 +21,7 @@ const Search = (): JSX.Element => {
 
   return (
     <div className="search">
-      {isVisible && <SeacrhCardsBlock searchValue={searchValue} />}
+      {isVisible && <SearchCardsBlock searchValue={searchValue} />}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-type ImageWithPlaceholderPorps = {
+type ImageWithPlaceholderProps = {
   src: string;
   className?: string;
   alt: string;
@@ -10,7 +10,7 @@ const ImageWithPlaceholder = ({
   src,
   className,
   alt,
-}: ImageWithPlaceholderPorps) => {
+}: ImageWithPlaceholderProps) => {
   const [imgLoaded, setImgLoaded] = useState<boolean>(false);
   const placeholderSrc = 'images/imagePreloader.webp';
 

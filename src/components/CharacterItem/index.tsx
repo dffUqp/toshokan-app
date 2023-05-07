@@ -1,5 +1,5 @@
-import ImageWithPlaceholder from '@components/ImageWithPlaceholder';
 import React from 'react';
+import ImageWithPlaceholder from '@components/ImageWithPlaceholder';
 import { IAnimeCharacter } from '@ts/AnimeInterface';
 
 type CharacterItemProps = {

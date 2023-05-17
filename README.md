@@ -1,23 +1,23 @@
 # Getting Started with Toshokan Application
 
-## About
-This project is AnimePlatform
-where u can know any information about your 
-favorite anime or characters.  
-If said more simply this app is Wikipedia in the cartoons world.  
-[LINK PREVIEW](https://splendorous-druid-f83cc3.netlify.app)
+This project is an Anime Platform where you can find any information about your favorite
+cartoons. Simply put, this application is Wikipedia in the cartoon world. 
 
-Techlogy stack: 
-- React
-- React Router v6
-- Recoil
-- Tailwind
-- TypeScript
-- React Query
-- React Spring
-- I18n
+[Project Page](https://splendorous-druid-f83cc3.netlify.app)
 
-At this moment on-site completed only 3 pages, it is 
+## Stack: 
+- [React](https://react.dev/)
+- [React Router v6](https://reactrouter.com/en/main)
+- [Recoil](https://recoiljs.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Query](https://tanstack.com/query/v3/)
+- [React Spring](https://www.react-spring.dev/)
+- [I18n](https://www.i18next.com/)
+
+## Preview
+
+At this moment completed only 3 pages, it is 
 HomePage, search page, and product page.
 
 ![](https://cdn.discordapp.com/attachments/481837341942611969/1036626984161255585/Screenshot_2022-10-31_145739.png)  

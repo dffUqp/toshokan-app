@@ -17,15 +17,13 @@ cartoons. Simply put, this application is Wikipedia in the cartoon world.
 
 ## Preview
 
-At this moment completed only 3 pages, it is 
-HomePage, search page, and product page.
+Currently, only three pages have been completed: home, search, and product pages.
 
-![](https://cdn.discordapp.com/attachments/481837341942611969/1036626984161255585/Screenshot_2022-10-31_145739.png)  
+![](https://github.com/dffUqp/toshokan-app/assets/96138503/9b74b671-5158-4be6-82c6-7c1e56eb99e3)
 
-![](https://cdn.discordapp.com/attachments/481837341942611969/1036627011273240627/Screenshot_2022-10-31_145654.png)  
+![](https://github.com/dffUqp/toshokan-app/assets/96138503/a5810cb7-47a9-4e28-90a2-72d8505fc3f0)
 
-![](https://cdn.discordapp.com/attachments/481837341942611969/1036627001450168430/Screenshot_2022-10-31_145832.png)
-
+![](https://github.com/dffUqp/toshokan-app/assets/96138503/6a05db12-a939-4652-8ba0-7f7a746c93e6)
 
 ## Available Scripts
 
